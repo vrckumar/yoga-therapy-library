@@ -6,13 +6,13 @@
     <title>VRC Yoga Therapy Library</title>
     <meta
       name="description"
-      content="A text-first public draft of VRC's yoga therapy reference library: selected practices, therapeutic themes, and safety-first study notes."
+      content="A text-first yoga therapy practice finder with selected MVP items, filters, safety notes, and links into the full reference library."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="VRC Yoga Therapy Library" />
     <meta
       property="og:description"
-      content="A public, text-first yoga therapy reference with a small MVP across practice, breath, relaxation, lifestyle, and condition tiers."
+      content="A compact yoga therapy practice finder for reviewing selected foundation, breath, posture, relaxation, lifestyle, and condition items."
     />
     <meta property="og:url" content="https://vrckumar.github.io/yoga-therapy-library/" />
     <meta name="twitter:card" content="summary" />
@@ -20,151 +20,153 @@
     <link rel="stylesheet" href="v1.css" />
   </head>
   <body>
-    <header class="site-header">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#top">VRC Yoga Therapy Library</a>
-        <div class="nav-links">
-          <a href="#tiers">Tiers</a>
-          <a href="#mvp">MVP</a>
-          <a href="#library">Library</a>
-          <a href="#notes">Notes</a>
+    <div class="app-shell">
+      <aside class="rail" aria-label="Library navigation">
+        <a class="brand" href="./" aria-label="VRC Yoga Therapy Library home">
+          <span class="brand-mark" aria-hidden="true">YT</span>
+          <span>VRC Yoga Therapy</span>
+        </a>
+        <nav class="rail-nav">
+          <a class="active" href="#finder">Finder</a>
+          <a href="#sequence">Sequence</a>
+          <a href="#scope">Scope</a>
+          <a href="#safety">Safety</a>
+        </nav>
+        <div class="rail-note">
+          <span>Public V1</span>
+          <p>Text-first MVP for copy, taxonomy, and workflow review.</p>
         </div>
-      </nav>
+      </aside>
 
-      <section class="hero" id="top">
-        <p class="eyebrow">Public V1 draft</p>
-        <h1>Yoga therapy notes, kept practical and reviewable.</h1>
-        <p class="lede">
-          A text-first reference for selected practices, breathwork, relaxation,
-          lifestyle ideas, and condition-oriented study notes. This version is
-          intentionally small while the public voice and visual direction settle.
-        </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#mvp">Browse MVP items</a>
-          <a class="button secondary" href="practices/P0135/">Open Chair Relaxation</a>
-        </div>
-      </section>
-    </header>
-
-    <main>
-      <section class="overview" aria-label="Library summary">
-        <article>
-          <span>Text first</span>
-          <strong>No image dependency for V1.</strong>
-          <p>The site is readable, light, and ready for copy review before adding visuals.</p>
-        </article>
-        <article>
-          <span>Small scope</span>
-          <strong>A few items from each tier.</strong>
-          <p>The MVP samples enough of the taxonomy to test structure without overcommitting.</p>
-        </article>
-        <article>
-          <span>Static deploy</span>
-          <strong>GitHub Pages friendly.</strong>
-          <p>No build step is required for the public landing page.</p>
-        </article>
-      </section>
-
-      <section class="section" id="tiers">
-        <div class="section-title">
-          <p class="eyebrow">Structure</p>
-          <h2>Working tiers</h2>
-        </div>
-        <div class="tier-grid">
-          <article>
-            <h3>Foundation</h3>
-            <p>Simple loosening movements, joint mobility, and accessible chair options.</p>
-          </article>
-          <article>
-            <h3>Breath</h3>
-            <p>Breath awareness, sectional breathing, humming practices, and gentle pranayama.</p>
-          </article>
-          <article>
-            <h3>Posture</h3>
-            <p>Selected asana and movement patterns with safety notes and practical use cases.</p>
-          </article>
-          <article>
-            <h3>Relaxation</h3>
-            <p>Restorative postures, guided relaxation, meditation, and nervous-system downshifts.</p>
-          </article>
-          <article>
-            <h3>Lifestyle</h3>
-            <p>Study notes around routine, food, sleep, pacing, and self-observation.</p>
-          </article>
-          <article>
-            <h3>Condition Pathways</h3>
-            <p>Condition-oriented references for learning, review, and therapist-guided planning.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="mvp">
-        <div class="section-title split">
+      <main class="workspace">
+        <header class="topbar">
           <div>
-            <p class="eyebrow">MVP sample</p>
-            <h2>A few items across the tiers</h2>
+            <p class="eyebrow">Practice finder</p>
+            <h1>Review selected yoga therapy practices by tier, goal, and caution.</h1>
           </div>
-          <label class="search">
-            <span>Filter</span>
-            <input id="itemSearch" type="search" placeholder="breath, chair, back, calm" />
-          </label>
-        </div>
-        <div class="item-list" id="itemList" aria-live="polite"></div>
-      </section>
+          <a class="top-link" href="categories/psychological/">Browse categories</a>
+        </header>
 
-      <section class="section library-callout" id="library">
-        <div>
-          <p class="eyebrow">Existing library</p>
-          <h2>Keep the full generated reference available.</h2>
+        <section class="metrics" aria-label="MVP summary">
+          <article>
+            <span id="metricItems">0</span>
+            <p>MVP items</p>
+          </article>
+          <article>
+            <span>6</span>
+            <p>Working tiers</p>
+          </article>
+          <article>
+            <span id="metricSelected">0</span>
+            <p>Draft sequence</p>
+          </article>
+          <article>
+            <span>Text</span>
+            <p>Visual mode</p>
+          </article>
+        </section>
+
+        <section class="panel finder-panel" id="finder">
+          <div class="panel-head">
+            <div>
+              <h2>Finder</h2>
+              <p>Search and filter the public MVP subset.</p>
+            </div>
+            <label class="search">
+              <span>Search</span>
+              <input id="itemSearch" type="search" placeholder="breath, chair, back, calm" />
+            </label>
+          </div>
+
+          <div class="tier-tabs" id="tierTabs" role="tablist" aria-label="Tier filter"></div>
+
+          <div class="finder-layout">
+            <section class="result-column" aria-label="Filtered practices">
+              <div class="result-bar">
+                <span id="resultCount">0 items</span>
+                <button class="text-button" id="resetFilters" type="button">Reset</button>
+              </div>
+              <div class="item-list" id="itemList" aria-live="polite"></div>
+            </section>
+
+            <aside class="detail-panel" aria-label="Selected item details">
+              <div class="detail-empty" id="detailEmpty">
+                <h3>Select an item</h3>
+                <p>Use the list to review intent, caution, tier, and direct reference link.</p>
+              </div>
+              <div class="detail-card hidden" id="detailCard">
+                <span class="tier-pill" id="detailTier"></span>
+                <h3 id="detailTitle"></h3>
+                <p id="detailSummary"></p>
+                <dl>
+                  <div>
+                    <dt>Goal</dt>
+                    <dd id="detailGoal"></dd>
+                  </div>
+                  <div>
+                    <dt>Caution</dt>
+                    <dd id="detailCaution"></dd>
+                  </div>
+                  <div>
+                    <dt>Reference</dt>
+                    <dd><a id="detailLink" href="#">Open source page</a></dd>
+                  </div>
+                </dl>
+                <button class="primary-action" id="addSelected" type="button">Add to sequence</button>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <section class="lower-grid">
+          <section class="panel" id="sequence">
+            <div class="panel-head compact">
+              <div>
+                <h2>Draft sequence</h2>
+                <p>Temporary planning tray for the MVP items.</p>
+              </div>
+              <button class="text-button" id="clearSequence" type="button">Clear</button>
+            </div>
+            <div class="sequence-list" id="sequenceList"></div>
+          </section>
+
+          <section class="panel" id="scope">
+            <div class="panel-head compact">
+              <div>
+                <h2>V1 scope</h2>
+                <p>Small enough to tune public tone before visuals.</p>
+              </div>
+            </div>
+            <div class="scope-list">
+              <article>
+                <strong>Included</strong>
+                <span>Foundation, breath, posture, relaxation, lifestyle, condition samples.</span>
+              </article>
+              <article>
+                <strong>Deferred</strong>
+                <span>Images, clinical claims, long protocols, and polished brand language.</span>
+              </article>
+              <article>
+                <strong>Next UX pass</strong>
+                <span>Decide public tone, information density, and whether deep pages need the same app shell.</span>
+              </article>
+            </div>
+          </section>
+        </section>
+
+        <section class="panel safety-panel" id="safety">
+          <div>
+            <p class="eyebrow">Safety framing</p>
+            <h2>Educational reference only.</h2>
+          </div>
           <p>
-            The deeper generated pages remain published for now. V1 uses this landing
-            page as the reviewed public entry point while individual practice and
-            condition pages stay reachable.
+            Practices should be adapted to the person, context, current symptoms, medical
+            restrictions, and available support. Pain, dizziness, numbness, breath strain,
+            pressure, or distress are reasons to pause and reassess.
           </p>
-        </div>
-        <div class="link-stack" aria-label="Featured deep links">
-          <a href="categories/psychological/">Psychological category</a>
-          <a href="categories/respiratory/">Respiratory category</a>
-          <a href="categories/rheumatology/">Rheumatology category</a>
-          <a href="practices/P0069/">Nadi Suddhi</a>
-          <a href="practices/P0135/">Chair Relaxation</a>
-        </div>
-      </section>
-
-      <section class="section notes" id="notes">
-        <div class="section-title">
-          <p class="eyebrow">Use notes</p>
-          <h2>Public wording for now</h2>
-        </div>
-        <div class="note-grid">
-          <article>
-            <h3>Educational reference</h3>
-            <p>
-              This site is for study and planning support. It does not diagnose,
-              prescribe, or replace care from qualified health professionals.
-            </p>
-          </article>
-          <article>
-            <h3>Modify first</h3>
-            <p>
-              Practices should be adapted to the person, context, current symptoms,
-              medical restrictions, and available support.
-            </p>
-          </article>
-          <article>
-            <h3>Stop signals</h3>
-            <p>
-              Pain, dizziness, numbness, breath strain, pressure, or distress are
-              reasons to pause and reassess.
-            </p>
-          </article>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <p>VRC Yoga Therapy Library. Public V1 text draft.</p>
-    </footer>
+        </section>
+      </main>
+    </div>
 
     <script src="v1.js"></script>
   </body>
