@@ -22,7 +22,7 @@ const items = [
     tier: "Breath",
     title: "Nadi Suddhi",
     goal: "Regulation",
-    summary: "A calm pranayama reference for breath awareness and steady attention.",
+    summary: "A calm pranayama sample for breath awareness and steady attention.",
     caution: "Avoid breath strain. Keep the inhale and exhale comfortable.",
     href: "practices/P0069/"
   },
@@ -40,7 +40,7 @@ const items = [
     tier: "Posture",
     title: "Vrikshasana",
     goal: "Balance",
-    summary: "Standing balance practice for attention, steadiness, and strength progression.",
+    summary: "Standing balance sample for attention, steadiness, and strength progression.",
     caution: "Use wall or chair support when balance is uncertain.",
     href: "practices/P0102/"
   },
@@ -49,7 +49,7 @@ const items = [
     tier: "Posture",
     title: "Setubandhasana",
     goal: "Strength",
-    summary: "Back-body strengthening and chest-opening practice with modification potential.",
+    summary: "Back-body strengthening and chest-opening sample with modification potential.",
     caution: "Avoid neck pressure. Use support or skip during acute back or neck pain.",
     href: "practices/P0101/"
   },
@@ -67,7 +67,7 @@ const items = [
     tier: "Relaxation",
     title: "DRT",
     goal: "Recovery",
-    summary: "Deep relaxation practice for rest, observation, and nervous-system settling.",
+    summary: "Deep relaxation sample for rest, observation, and nervous-system settling.",
     caution: "Modify position if lying still increases discomfort or distress.",
     href: "practices/P0123/"
   },
@@ -85,7 +85,7 @@ const items = [
     tier: "Condition Pathways",
     title: "Back pain pathway",
     goal: "Study",
-    summary: "Condition-oriented reference for grouped and adapted practices.",
+    summary: "Condition-oriented sample for reviewing grouped and adapted practices.",
     caution: "Pain, numbness, weakness, or worsening symptoms require reassessment.",
     href: "ailments/A004/"
   },
@@ -94,7 +94,7 @@ const items = [
     tier: "Condition Pathways",
     title: "Hypertension pathway",
     goal: "Study",
-    summary: "Cardiovascular reference with caution and adaptation notes.",
+    summary: "Cardiovascular sample for checking tone, cautions, and review structure.",
     caution: "Avoid strain and breath retention unless cleared and supervised.",
     href: "ailments/A005/"
   }
@@ -165,7 +165,7 @@ function renderList() {
   if (visible.length === 0) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
-    empty.textContent = "No practices match the current filters.";
+    empty.textContent = "No MVP items match the current filters.";
     itemList.append(empty);
     return;
   }
@@ -221,7 +221,7 @@ function renderSequence() {
   if (state.sequence.length === 0) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
-    empty.textContent = "Select practices from the finder to build a short sequence.";
+    empty.textContent = "Select items from the finder to draft a short review sequence.";
     sequenceList.append(empty);
     return;
   }
