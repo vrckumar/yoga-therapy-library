@@ -6,13 +6,13 @@
     <title>VRC Yoga Therapy Library</title>
     <meta
       name="description"
-      content="A text-first yoga therapy practice finder with selected MVP items, filters, safety notes, and links into the full reference library."
+      content="A yoga therapy practice finder with selected practices, filters, safety notes, and links into the full reference library."
     />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="VRC Yoga Therapy Library" />
     <meta
       property="og:description"
-      content="A compact yoga therapy practice finder for reviewing selected foundation, breath, posture, relaxation, lifestyle, and condition items."
+      content="A compact yoga therapy practice finder for foundation, breath, posture, relaxation, lifestyle, and condition references."
     />
     <meta property="og:url" content="https://vrckumar.github.io/yoga-therapy-library/" />
     <meta name="twitter:card" content="summary" />
@@ -29,12 +29,12 @@
         <nav class="rail-nav">
           <a class="active" href="#finder">Finder</a>
           <a href="#sequence">Sequence</a>
-          <a href="#scope">Scope</a>
+          <a href="#guide">Guide</a>
           <a href="#safety">Safety</a>
         </nav>
         <div class="rail-note">
-          <span>Public V1</span>
-          <p>Text-first MVP for copy, taxonomy, and workflow review.</p>
+          <span>Practice finder</span>
+          <p>Selected references across movement, breath, relaxation, and condition categories.</p>
         </div>
       </aside>
 
@@ -42,27 +42,27 @@
         <header class="topbar">
           <div>
             <p class="eyebrow">Practice finder</p>
-            <h1>Review selected yoga therapy practices by tier, goal, and caution.</h1>
+            <h1>Find yoga therapy practices by tier, goal, and caution.</h1>
           </div>
           <a class="top-link" href="categories/psychological/">Browse categories</a>
         </header>
 
-        <section class="metrics" aria-label="MVP summary">
+        <section class="metrics" aria-label="Library summary">
           <article>
             <span id="metricItems">0</span>
-            <p>MVP items</p>
+            <p>Selected practices</p>
           </article>
           <article>
             <span>6</span>
-            <p>Working tiers</p>
+            <p>Practice tiers</p>
           </article>
           <article>
             <span id="metricSelected">0</span>
-            <p>Draft sequence</p>
+            <p>Sequence</p>
           </article>
           <article>
             <span>Text</span>
-            <p>Visual mode</p>
+            <p>Format</p>
           </article>
         </section>
 
@@ -70,7 +70,7 @@
           <div class="panel-head">
             <div>
               <h2>Finder</h2>
-              <p>Search and filter the public MVP subset.</p>
+              <p>Search and filter the selected practice set.</p>
             </div>
             <label class="search">
               <span>Search</span>
@@ -92,7 +92,7 @@
             <aside class="detail-panel" aria-label="Selected item details">
               <div class="detail-empty" id="detailEmpty">
                 <h3>Select an item</h3>
-                <p>Use the list to review intent, caution, tier, and direct reference link.</p>
+                <p>Use the list to see intent, caution, tier, and the direct reference link.</p>
               </div>
               <div class="detail-card hidden" id="detailCard">
                 <span class="tier-pill" id="detailTier"></span>
@@ -122,33 +122,33 @@
           <section class="panel" id="sequence">
             <div class="panel-head compact">
               <div>
-                <h2>Draft sequence</h2>
-                <p>Temporary planning tray for the MVP items.</p>
+                <h2>Sequence</h2>
+                <p>Build a short practice plan from selected items.</p>
               </div>
               <button class="text-button" id="clearSequence" type="button">Clear</button>
             </div>
             <div class="sequence-list" id="sequenceList"></div>
           </section>
 
-          <section class="panel" id="scope">
+          <section class="panel" id="guide">
             <div class="panel-head compact">
               <div>
-                <h2>V1 scope</h2>
-                <p>Small enough to tune public tone before visuals.</p>
+                <h2>Library guide</h2>
+                <p>Use the selected set as a starting point, then open the linked references for more detail.</p>
               </div>
             </div>
             <div class="scope-list">
               <article>
-                <strong>Included</strong>
-                <span>Foundation, breath, posture, relaxation, lifestyle, condition samples.</span>
+                <strong>Start here</strong>
+                <span>Begin with low-intensity movement, breath awareness, or supported relaxation.</span>
               </article>
               <article>
-                <strong>Deferred</strong>
-                <span>Images, clinical claims, long protocols, and polished brand language.</span>
+                <strong>Adapt</strong>
+                <span>Match the practice to the person, symptoms, restrictions, and available support.</span>
               </article>
               <article>
-                <strong>Next UX pass</strong>
-                <span>Decide public tone, information density, and whether deep pages need the same app shell.</span>
+                <strong>Go deeper</strong>
+                <span>Open the linked reference pages for related categories, conditions, and practice details.</span>
               </article>
             </div>
           </section>
